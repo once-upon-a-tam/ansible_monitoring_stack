@@ -1,0 +1,19 @@
+# Ansible
+inventory/hosts.yaml
+inventory/hosts.yml
+*.retry
+*vault*
+*secrets*
+.vault_pass
+*.vault_pass
+
+# Molecule
+molecule/**/molecule.yaml.bak
+.cache/
+
+# OS-generated files
+.DS_Store
+
+# User-created backup files
+*.bak
+*.swp

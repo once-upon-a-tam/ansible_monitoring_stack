@@ -1,0 +1,6 @@
+---
+prometheus_version: "3.10"
+prometheus_checksum: "41c50d97bb6a181623fc89d3fe61d0cc68ee69cc93da9091b8bba005f9690122"
+
+prometheus_port: 9090
+prometheus_retention: "90d"

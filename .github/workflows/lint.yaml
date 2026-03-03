@@ -1,0 +1,29 @@
+---
+name: Lint
+'on':
+  pull_request:
+  push:
+    branches:
+      - main
+  schedule:
+    - cron: "0 1 * * 1"
+
+jobs:
+  lint:
+    name: Lint
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out code
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+
+      - name: Install dependencies
+        run: pip3 install yamllint ansible-lint
+
+      - name: Run yamllint
+        run: yamllint -c .yamllint.yaml .
+
+      - name: Run ansible-lint
+        run: ansible-lint
